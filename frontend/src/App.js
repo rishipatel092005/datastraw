@@ -20,7 +20,6 @@ export default function App() {
   });
 
   // Fetch tickets
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     fetchTickets();
   }, [search, status]);
