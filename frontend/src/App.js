@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import './App.css';
 
@@ -19,12 +19,7 @@ export default function App() {
     description: '',
   });
 
-  // Fetch tickets
-  useEffect(() => {
-    fetchTickets();
-  }, [search, status]);
-
-  const fetchTickets = async () => {
+  const fetchTickets = useCallback(async () => {
     setLoading(true);
     try {
       const params = new URLSearchParams();
@@ -37,7 +32,12 @@ export default function App() {
       console.error('Error fetching tickets:', error);
     }
     setLoading(false);
-  };
+  }, [search, status]);
+
+  // Fetch tickets
+  useEffect(() => {
+    fetchTickets();
+  }, [fetchTickets]);
 
   // Create ticket
   const handleSubmit = async (e) => {
