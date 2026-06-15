@@ -191,22 +191,3 @@ datastraw-crm/
     └── package.json            # Frontend dependencies
 ```
 
-## 🤝 Contributing
-
-Feel free to modify and enhance the application. All code is yours to customize.
-
-## 📞 Support
-
-For questions or issues:
-- Check the code comments
-- Review the API endpoints
-- Test locally first
-- Use console.log for debugging
-
-## ✅ License
-
-MIT - Use freely in your projects
-
----
-
-**Built with ❤️ by Datastraw Technologies**
